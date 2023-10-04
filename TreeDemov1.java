@@ -58,7 +58,19 @@ class Node{
 	   Prints the value of every node preorder
 	   */
 	   public void preOrderTraversal(Node root){
-		//implement in here
+			//Check if the root is null.
+			if(root == null){
+				return;
+			}
+
+			//Visit the root.
+			System.out.println(root.value + ",");
+
+			//Check the left subtree.
+			preOrderTraversal(root.left);
+
+			//Check the right subtree.
+			preOrderTraversal(root.right);
 		   
 	   }
 
