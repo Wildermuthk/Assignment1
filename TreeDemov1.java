@@ -159,13 +159,19 @@ class Node{
 	  
 	  
 	  
-	   /*
-	   a method to find the node in the tree
-	   with a largest key
+	   /**
+	   * a method to find the node in the tree with a largest key
+	   * @param root The root of the tree.
+	   * @return The maximum value of the tree.
 	   */
 	   public int getMax(Node root){
 			
-			return 0;
+			if(root.right == null){
+            	return root.value;
+			}
+
+	     	return getMax(root.right);
+
 	   }
 	   
 	   
