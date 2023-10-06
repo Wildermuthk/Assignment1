@@ -143,13 +143,18 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a smallest key
+	   /**
+		* a method to find the node in the tree with a smallest key
+		* @param root The root of the tree
+		* @return The root with the minimum value in the tree.   
 	   */
 	   public int getMin(Node root){
-         
-	     	return 0;
+
+			if(root.left == null){
+				return root.value;
+			}
+
+	     	return getMin(root.left);
 	   }
 	  
 	  
