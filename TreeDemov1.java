@@ -53,7 +53,7 @@ class Node{
 	      }//closing main if-else 
 	   }
 	   
-	   /*
+	   /**
 	   * pre-order traversal
 	   * Prints the value of every node preorder.
 	   * @param root The root of the tree.
@@ -73,7 +73,7 @@ class Node{
 
 	   
 	   
-	   /*
+	   /**
 	   * in-order traversal
 	   * Prints out the value of each node in order.
 	   * @param root The root of the tree.
@@ -92,7 +92,7 @@ class Node{
 	   
 	   
 	   
-	   /*
+	   /**
 	   * post-order traversal
 	   * Prints out the value of each node in post-order.
 	   * @param root The root of the tree.
@@ -113,13 +113,32 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a specific value
+	   /**
+	   * a method to find the node in the tree
+	   * with a specific value
+	   * @param root The root of the tree.
+	   * @param key The value to be found.
+	   * @return True if the value was found, False if the value was not found.
 	   */
 	   public boolean find(Node root, int key){
-		 //implement in here
-		  
+		 	if(root == null){
+				return false;
+			}
+
+			if(root.value == key){
+				return true;
+			}
+
+			boolean checkL = find(root.left, key);
+			
+			if(checkL){
+            	return true;
+			}
+
+			boolean checkR = find(root.right, key);
+
+			return checkR;
+
 	   }
 	   
 	   
@@ -129,8 +148,8 @@ class Node{
 	   with a smallest key
 	   */
 	   public int getMin(Node root){
-         //implement in here
-	      
+         
+	     	return 0;
 	   }
 	  
 	  
@@ -140,7 +159,8 @@ class Node{
 	   with a largest key
 	   */
 	   public int getMax(Node root){
-         //implement in here
+			
+			return 0;
 	   }
 	   
 	   
