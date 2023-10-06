@@ -55,8 +55,8 @@ class Node{
 	   
 	   /*
 	   * pre-order traversal
-	   * Prints the value of every node preorder
-	   * @param root The root of the tree
+	   * Prints the value of every node preorder.
+	   * @param root The root of the tree.
 	   */
 	   public void preOrderTraversal(Node root){
 			
@@ -76,28 +76,38 @@ class Node{
 	   /*
 	   * in-order traversal
 	   * Prints out the value of each node in order.
-	   * @param root The root of the tree
+	   * @param root The root of the tree.
 	   */
 	   public void inOrderTraversal(Node root){
 			if(root == null){
 				return;
 			}
 		
-			preOrderTraversal(root.left);
+			inOrderTraversal(root.left);
 			
 			System.out.println(root.value + ",");	
 		
-			preOrderTraversal(root.right);
+			inOrderTraversal(root.right);
 	   }
 	   
 	   
 	   
 	   /*
-	   post-order traversal
+	   * post-order traversal
+	   * Prints out the value of each node in post-order.
+	   * @param root The root of the tree.
 	   */
 	  
 	   public void postOrderTraversal(Node root){
-         //implement in here
+			if(root == null){
+				return;
+			}
+		
+			postOrderTraversal(root.left);
+			
+			postOrderTraversal(root.right);
+		
+			System.out.println(root.value + ",");
 		   
 	   }
 	   
