@@ -54,33 +54,40 @@ class Node{
 	   }
 	   
 	   /*
-	   pre-order traversal
-	   Prints the value of every node preorder
+	   * pre-order traversal
+	   * Prints the value of every node preorder
+	   * @param root The root of the tree
 	   */
 	   public void preOrderTraversal(Node root){
-			//Check if the root is null.
+			
 			if(root == null){
 				return;
 			}
-
-			//Visit the root.
+			
 			System.out.println(root.value + ",");
-
-			//Check the left subtree.
+			
 			preOrderTraversal(root.left);
-
-			//Check the right subtree.
+			
 			preOrderTraversal(root.right);
-		   
 	   }
 
 	   
 	   
 	   /*
-	   in-order traversal
+	   * in-order traversal
+	   * Prints out the value of each node in order.
+	   * @param root The root of the tree
 	   */
 	   public void inOrderTraversal(Node root){
-	      //implement in here
+			if(root == null){
+				return;
+			}
+		
+			preOrderTraversal(root.left);
+			
+			System.out.println(root.value + ",");	
+		
+			preOrderTraversal(root.right);
 	   }
 	   
 	   
